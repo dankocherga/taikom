@@ -38,6 +38,7 @@ class RequestFactory
     private function client($endpoint, $clientOptions)
     {
         $client = new Client("https://api.telegram.org/bot{$this->botId}/{$endpoint}", $clientOptions);
+        $client->setAdapter('Zend\Http\Client\Adapter\Curl');
         return $client;
     }
 
