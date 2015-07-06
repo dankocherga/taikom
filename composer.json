@@ -1,0 +1,14 @@
+{
+  "require": {
+    "zendframework/zend-http": "2.4",
+    "zendframework/zend-config": "2.4",
+    "zendframework/zend-json": "2.4",
+    "zendframework/zend-log": "2.4"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.zendframework.com/"
+    }
+  ]
+}
