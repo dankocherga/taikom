@@ -10,7 +10,8 @@ Currently bot supports the following commands:
 1. Download source
 2. Run `composer install`
 3. Copy `taikon.json.template` to `taikom.json` and put your bot token inside
-4. Execute `php taikom.php`
+4. Create writeable `var` directory
+5. Execute `php taikom.php`
 
 ## Extending bot
 
