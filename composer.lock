@@ -4,65 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ac618757e4d0d0dfe280ee59c663cbf",
+    "hash": "b8ffb73b300938ba6fa062536ec32c62",
     "packages": [
-        {
-            "name": "zendframework/zend-code",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-code.git",
-                "reference": "1f1c2959098cea659fb457dc43fcec2018ba285b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://packages.zendframework.com/composer/zendframework-zend-code-2.4.0-9460dc.zip",
-                "reference": "1f1c2959098cea659fb457dc43fcec2018ba285b",
-                "shasum": "d46d5a0750e84424ea3adb1e4d5f39dbfe3fc00d"
-            },
-            "require": {
-                "php": ">=5.3.23",
-                "zendframework/zend-eventmanager": "self.version"
-            },
-            "require-dev": {
-                "doctrine/common": ">=2.1",
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "dev-master",
-                "zendframework/zend-stdlib": "self.version"
-            },
-            "suggest": {
-                "doctrine/common": "Doctrine\\Common >=2.1 for annotation features",
-                "zendframework/zend-stdlib": "Zend\\Stdlib component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Code\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "ZendTest\\Code\\": "test/"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "provides facilities to generate arbitrary code using an object oriented interface",
-            "homepage": "https://github.com/zendframework/zend-code",
-            "keywords": [
-                "code",
-                "zf2"
-            ],
-            "time": "2015-03-31 15:39:14"
-        },
         {
             "name": "zendframework/zend-config",
             "version": "2.4.0",
@@ -125,62 +68,6 @@
             "time": "2015-03-25 20:55:48"
         },
         {
-            "name": "zendframework/zend-di",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-di.git",
-                "reference": "3d08cf7682bf527666aa853031f26d704c3d72dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://packages.zendframework.com/composer/zendframework-zend-di-2.4.0-7b8d8f.zip",
-                "reference": "3d08cf7682bf527666aa853031f26d704c3d72dc",
-                "shasum": "d7347869559c84545e563d18a971897a0c65563c"
-            },
-            "require": {
-                "php": ">=5.3.23",
-                "zendframework/zend-code": "self.version",
-                "zendframework/zend-stdlib": "self.version"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "dev-master",
-                "zendframework/zend-servicemanager": "self.version"
-            },
-            "suggest": {
-                "zendframework/zend-servicemanager": "Zend\\ServiceManager component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Di\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "ZendTest\\Di\\": "test/"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": " ",
-            "homepage": "https://github.com/zendframework/zend-di",
-            "keywords": [
-                "di",
-                "zf2"
-            ],
-            "time": "2015-03-25 20:55:48"
-        },
-        {
             "name": "zendframework/zend-escaper",
             "version": "2.4.0",
             "source": {
@@ -226,57 +113,6 @@
             "homepage": "https://github.com/zendframework/zend-escaper",
             "keywords": [
                 "escaper",
-                "zf2"
-            ],
-            "time": "2015-03-23 18:29:14"
-        },
-        {
-            "name": "zendframework/zend-eventmanager",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-eventmanager.git",
-                "reference": "14edbe121975f8c4e44d725547ef7d8333afc014"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://packages.zendframework.com/composer/zendframework-zend-eventmanager-2.4.0-bd76c3.zip",
-                "reference": "14edbe121975f8c4e44d725547ef7d8333afc014",
-                "shasum": "b6adac45b27e0bbbc326e81233dcdf21e49dc002"
-            },
-            "require": {
-                "php": ">=5.3.23",
-                "zendframework/zend-stdlib": "self.version"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "dev-master"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-develop": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\EventManager\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "ZendTest\\EventManager\\": "test/"
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": " ",
-            "homepage": "https://github.com/zendframework/zend-event-manager",
-            "keywords": [
-                "eventmanager",
                 "zf2"
             ],
             "time": "2015-03-23 18:29:14"
