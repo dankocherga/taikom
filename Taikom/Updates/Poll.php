@@ -1,7 +1,7 @@
 <?php
 namespace Taikom\Updates;
 
-use Taikom\Command\CommandFactory;
+use Taikom\Command\CommandFactory\CommandFactoryInterface as CommandFactory;
 use Taikom\Message;
 use Taikom\Request\RequestFactory;
 use Zend\Config\Config;
@@ -12,12 +12,14 @@ class Poll
     private $config;
     private $offset;
     private $log;
+    private $commandFactory;
 
-    public function __construct(Config $config, Logger $log)
+    public function __construct(Config $config, Logger $log, CommandFactory $commandFactory)
     {
         $this->config = $config;
         $this->offset = new Offset();
         $this->log = $log;
+        $this->commandFactory = $commandFactory;
     }
 
     public function start()
@@ -42,7 +44,7 @@ class Poll
         foreach ($result as $update) {
             if (isset($update['message'])) {
                 $message = new Message($update['message']);
-                $command = CommandFactory::factory($message->getText(), $this->log);
+                $command = $this->commandFactory->create($message->getText(), $this->log);
                 $command->exec($message, $requestFactory);
             }
 

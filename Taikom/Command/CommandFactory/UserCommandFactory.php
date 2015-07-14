@@ -1,13 +1,13 @@
 <?php
-namespace Taikom\Command;
+namespace Taikom\Command\CommandFactory;
 
 use Zend\Log\Logger;
 
-class CommandFactory
+class UserCommandFactory implements CommandFactoryInterface
 {
-    public static function factory($command, Logger $log)
+    public static function create($command, Logger $log)
     {
-        if (preg_match('/^\/(.*)\s*(.*)/', $command, $matches)) {
+        if (preg_match('/^\/([a-z]*)\s*(.*)$/', $command, $matches)) {
             $commandName = $matches[1];
             $log->notice("Recognized command '{$commandName}'");
 
@@ -21,6 +21,6 @@ class CommandFactory
             }
         }
 
-        return new Null();
+        return new \Taikom\Command\Null();
     }
 }
