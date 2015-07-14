@@ -1,7 +1,6 @@
 <?php
 namespace Taikom\Updates;
 
-
 class Offset
 {
     private $file;
